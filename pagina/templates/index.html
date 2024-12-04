@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand title" href="#">HeadWiks</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Page Shortcuts
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">About Headwiks</a></li>
+                            <li><a class="dropdown-item" href="#">APK Download</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">About us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+
+    <div>
+
+        <img src="../static/img/HW_Logo.png" alt="HW_logo" class="logo">
+
+        <br>
+
+        <h3 class="introText greened">
+            Headwiks its an app, but also, a passion driven project that experiments around with the idea of a social
+            network that gives its users the ability to make small entries of information about a theme that they chose,
+            just out of fun
+        </h3>
+    </div>
+
+    <br>
+
+    <hr class="dashed">
+
+    <h2 class="center">Writing your own entry for everyone to see!</h2>
+
+
+    <img src="../static/img/entrywriterscreenshotBalatro.png" alt="entry_writer_ss" class="screenshot">
+    <p class="boxed greened center">
+        The first part of the experience of the Writer kind, is the Entry Writer, the section where you can make your
+        imagination fly, and make an entry about any topic you want to write about, entries composes of: <br> <br>
+        - TITLE <br>
+        - IMAGE <br>
+        - BRIEFING <br>
+        - CONTENT <br>
+        - SOURCES
+
+    </p>
+
+
+    <br>
+
+    <hr class="dashed">
+
+    <h2 class="center">Automated Thumbnail for each Entry your make!</h2>
+
+
+    <img src="../static/img/thumbnailscreenshotBalatro.png" alt="entry_writer_ss" class="screenshot">
+    <p class="boxed center">
+        A thumbnail maded automatically based of the entry you made, that will be shown on the Main Page of the App
+    </p>
+
+
+    <br>
+
+    <hr class="dashed">
+
+    <h2 class="center">Final result</h2>
+
+
+    <img src="../static/img/entryscreenshotBalatro.png" alt="entry_writer_ss" class="screenshot">
+    <p class="boxed center">
+        sex
+    </p>
+
+
+
+
+    {% if request.user_agent.is_mobile %}
+    <div class="download-buttons">
+        <a href="https://github.com/HankoQuilodran/HeadWiks/raw/master/core/static/HeadWiks.apk"
+            class="btn-download app-store">Download Headwiks App for your Device</a>
+    </div>
+    {% endif %}
+
+    {% if request.user_agent.is_pc %}
+    <p>Escanea el código QR con tu dispositivo</p>
+    <div class="qr-container">
+        <img src="{% static 'img/QR_code.png' %}" alt="Código QR para descargar FarmApp">
+    </div>
+    {% endif %}
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
